@@ -1,0 +1,261 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Admiria - Responsive Flat Admin Dashboard</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App Icons -->
+        <link rel="shortcut icon" href="static/assets/images/favicon.ico">
+
+        <!-- C3 charts css -->
+        <link href="../plugins/c3/c3.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Basic Css files -->
+        <link href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="">
+                        <!--<a href="index.html" class="logo text-center">Admiria</a>-->
+                        <a href="index.html" class="logo"><img src="../static/assets/images/logo-sm.png" height="36" alt="logo"></a>
+                    </div>
+                </div>
+
+                <div class="sidebar-inner slimscrollleft">
+                    <div id="sidebar-menu">
+                        <ul>
+                                             
+                            <li class="menu-title">Components</li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-buffer"></i> <span> User Interface <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="tables-datatable.html" target="iframeContent">table</a></li>
+                                    <li><a href="ui-colors.html">Colors</a></li>
+                                    <li><a href="ui-cards.html">Cards</a></li>                                                                                     
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+
+            <!-- Start right Content here -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+
+                        <nav class="navbar-custom">
+                            <!-- Search input -->
+                            <div class="search-wrap" id="search-wrap">
+                                <div class="search-bar">
+                                    <input class="search-input" type="search" placeholder="Search" />
+                                    <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                        <i class="mdi mdi-close-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <ul class="list-inline float-right mb-0">
+                                <!-- Search -->
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link waves-effect toggle-search" href="#"  data-target="#search-wrap">
+                                        <i class="mdi mdi-magnify noti-icon"></i>
+                                    </a>
+                                </li>
+                                <!-- Fullscreen -->
+                                <li class="list-inline-item dropdown notification-list hidden-xs-down">
+                                    <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                                        <i class="mdi mdi-fullscreen noti-icon"></i>
+                                    </a>
+                                </li>
+                                <!-- language-->
+                                <li class="list-inline-item dropdown notification-list hidden-xs-down">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-muted" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        English <img src="static/assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="static/assets/images/flags/germany_flag.jpg" alt="" height="16"/><span> German </span></a>
+                                        <a class="dropdown-item" href="#"><img src="static/assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="static/assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="static/assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="static/assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                <!-- notification-->
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <i class="ion-ios7-bell noti-icon"></i>
+                                        <span class="badge badge-danger noti-icon-badge">3</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5>Notification (3)</h5>
+                                        </div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
+                                            <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+
+                                    </div>
+                                </li>
+                                <!-- User-->
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <img src="static/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                        <a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i> Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted"></i> My Wallet</a>
+                                        <a class="dropdown-item" href="#"><span class="badge badge-success pull-right m-t-5">5</span><i class="dripicons-gear text-muted"></i> Settings</a>
+                                        <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted"></i> Lock screen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i> Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Page title -->
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="button-menu-mobile open-left waves-effect">
+                                        <i class="ion-navicon"></i>
+                                    </button>
+                                </li>
+                                <li class="hide-phone list-inline-item app-search">
+                                    <h3 class="page-title">Dashboard</h3>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+                        </nav>
+
+                    </div>
+                    <!-- Top Bar End -->
+
+                    <!-- ==================
+                         PAGE CONTENT START
+                         ================== -->
+                        
+               
+                        <div >
+                            <iframe style="width: 100%;" onload="iframeLoad()" id="iframeContent" name="iframeContent"  scrolling="no"  frameborder="0" src="templates/table.html">
+                            
+                            </iframe>
+                        </div>
+
+                  
+          
+
+                  
+                </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2017 - 2019 Admiria <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://www.php.cn/xiazai/code">Themesbrand.</a></span>
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.slimscroll.js' %}"></script>
+        <script src="{% static 'assets/js/waves.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.nicescroll.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.scrollTo.min.js' %}"></script>
+
+        <!-- Peity chart JS -->
+        <script src="../plugins/peity-chart/jquery.peity.min.js"></script>
+
+        <!--C3 Chart-->
+        <script src="../plugins/d3/d3.min.js"></script>
+        <script src="../plugins/c3/c3.min.js"></script>
+
+        <!-- KNOB JS -->
+        <script src="../plugins/jquery-knob/excanvas.js"></script>
+        <script src="../plugins/jquery-knob/jquery.knob.js"></script>
+
+        <!-- Page specific js -->
+        <script src="{% static 'assets/pages/dashboard.js' %}"></script>
+
+        <!-- App js -->
+        <script src="{% static 'assets/js/app.js' %}"></script>
+        <script>
+            {% comment %} function changeFrameHeight(){
+            var ifm= document.getElementById("iframeContent"); 
+            ifm.height=document.documentElement.clientHeight;
+
+            } {% endcomment %}
+            function iframeLoad()
+            {
+                // document.getElementById("iframeContent").height=0;
+                document.getElementById("iframeContent").height=document.getElementById("iframeContent").contentWindow.document.body.scrollHeight;
+            }
+            window.onresize=function(){  
+                iframeLoad();  
+            } 
+        </script>
+    </body>
+</html>

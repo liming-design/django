@@ -1,0 +1,30 @@
+<body>
+    <h2>{{ book.bname }}</h2>
+
+    <table border="1" cellspacing="0">
+
+        <tr style="color: blueviolet">
+            <td>ID</td>
+            <td>人物姓名</td>
+            <td>武功</td>
+        </tr>
+        {% for i in heros %}
+        <tr>
+
+            <td>{{ i.id }}</td>
+
+            <td>{{ i.hname }}</td>
+
+            <td>{{ i.hkunfu }}</td>
+            {% empty %}
+            <td colspan="3" style="color: red">没有详细信息</td>
+
+        </tr>
+
+        {% endfor %}
+
+
+
+    </table>
+
+</body>

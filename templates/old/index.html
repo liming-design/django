@@ -1,0 +1,18 @@
+<body>
+    <h1>图书信息如下:</h1>
+    <table border="1" cellspacing="0">
+        <tr style="color: blueviolet">
+            <td>ID</td>
+            <td>书名</td>
+            <td>日期</td>
+        </tr>
+        {% for i in list %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td><a href="/books/{{ i.id }}">{{ i.bname }}</a></td>
+            <td>{{ i.bpud_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
